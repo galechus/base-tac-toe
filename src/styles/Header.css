@@ -1,0 +1,65 @@
+.app-header {
+    width: 100%;
+    background: linear-gradient(90deg, #232946 0%, #181c2b 100%);
+    color: #fff;
+    padding: 0.5em 1.2em;
+    box-shadow: 0 4px 24px #181c2b55;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+}
+
+.header-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #00ff8855;
+    background: #181c2b;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #00ff8899, 0 2px 12px #181c2b99;
+}
+
+.header-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.1em;
+}
+
+.header-username {
+    color: #00ff88;
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+.header-address {
+    color: #b0b0b0;
+    font-size: 0.95em;
+}
+
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 1.1rem;
+    }
+    .header-logo {
+        width: 28px;
+        height: 28px;
+    }
+    .app-header {
+        padding: 0.5em 0.5em;
+    }
+}

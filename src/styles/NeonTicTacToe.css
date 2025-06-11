@@ -1,0 +1,247 @@
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: "Arial", sans-serif;
+    min-height: 100vh;
+}
+
+.neon-container {
+    text-align: center;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.neon-header {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00ff88;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.neon-status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #b0b0b0;
+}
+
+.neon-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    background-color: #2a2a2a;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.neon-cell {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.neon-cell:hover {
+    background-color: #444;
+}
+
+.neon-cell svg {
+    width: 60px;
+    height: 60px;
+}
+
+.neon-reset {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #00ff88;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.neon-reset:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+}
+
+@media (max-width: 400px) {
+    .neon-board {
+        grid-template-columns: repeat(3, 80px);
+    }
+    .neon-cell {
+        width: 80px;
+        height: 80px;
+    }
+    .neon-cell svg {
+        width: 50px;
+        height: 50px;
+    }
+    .neon-header {
+        font-size: 2rem;
+    }
+}
+
+.neon-mode-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+    width: 100%;
+    max-width: 340px;
+}
+
+.neon-mode-card {
+    background: #232946;
+    color: #00ff88;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 2px 18px #00ff8855, 0 1px 8px #fff2;
+    padding: 1.5em 2.2em;
+    min-width: 140px;
+    width: 100%;
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.22s, color 0.22s, transform 0.18s, box-shadow 0.18s;
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.neon-mode-card + .neon-mode-card {
+    margin-top: 1.2em;
+}
+
+.neon-mode-card:hover,
+.neon-mode-card:focus {
+    background: #00ff88;
+    color: #232946;
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 6px 32px #00ff8855;
+}
+
+.neon-mode-desc {
+    display: block;
+    font-size: 0.85em;
+    color: #b0b0b0;
+    font-weight: 400;
+    margin-top: 0.5em;
+}
+
+@media (max-width: 700px) {
+    .neon-mode-grid {
+        max-width: 98vw;
+    }
+    .neon-mode-card {
+        padding: 1.2em 1em;
+    }
+}
+
+.neon-difficulty-grid {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.neon-difficulty-btn {
+    background: #232946;
+    color: #00ff88;
+    border: none;
+    border-radius: 999px;
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 1px 8px #00ff8844;
+    transition: background 0.18s, color 0.18s, transform 0.16s;
+}
+
+.neon-difficulty-btn.active,
+.neon-difficulty-btn:focus {
+    background: #00ff88;
+    color: #232946;
+    transform: scale(1.08);
+    box-shadow: 0 2px 16px #00ff8855;
+}
+
+.neon-difficulty-btn:hover:not(.active) {
+    background: #2a2a2a;
+    color: #00ff88;
+}
+
+.welcome-bg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80")
+        center/cover no-repeat;
+    z-index: 100;
+}
+
+.welcome-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(20, 20, 30, 0.82);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+}
+
+.welcome-logo {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 0 0 18px #00ff8899, 0 2px 12px #181c2b99;
+    margin-bottom: 1.5em;
+}
+
+.neon-login-btn {
+    background: #00ff88;
+    color: #181c2b;
+    border: none;
+    border-radius: 999px;
+    padding: 1em 2.5em;
+    font-size: 1.2em;
+    font-weight: 800;
+    box-shadow: 0 2px 24px #00ff8855;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, transform 0.16s, box-shadow 0.18s;
+    letter-spacing: 1px;
+}
+
+.neon-login-btn:hover,
+.neon-login-btn:focus {
+    background: #00e676;
+    color: #232946;
+    transform: scale(1.05);
+    box-shadow: 0 4px 32px #00ff8899;
+}
