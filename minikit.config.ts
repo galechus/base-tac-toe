@@ -15,6 +15,9 @@ export const minikitConfig = {
     payload: "",
     signature: "",
   },
+  baseBuilder: {
+    allowedAddresses: ["0x203e007e7f3148b4b258d0bb5226ec1A2877d80"],
+  },
   miniapp: {
     version: "1",
     name: "BaseTacToe",
@@ -34,5 +37,6 @@ export const minikitConfig = {
     ogTitle: "BaseTacToe - Tic-Tac-Toe Game",
     ogDescription: "Play classic Tic-Tac-Toe on Base chain!",
     ogImageUrl: `${ROOT_URL}/hero.png`,
+    noindex: false,
   },
 } as const;
