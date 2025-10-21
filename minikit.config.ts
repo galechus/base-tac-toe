@@ -18,9 +18,9 @@ export const minikitConfig = {
   miniapp: {
     version: "1",
     name: "BaseTacToe",
-    subtitle: "Neon Tic-Tac-Toe on Base",
+    subtitle: "Tic-Tac-Toe on Base",
     description:
-      "Play classic Tic-Tac-Toe with neon style! Train against AI, challenge friends, and dominate the board on Base chain.",
+      "Play classic Tic-Tac-Toe! Train against AI, challenge friends, and dominate the board on Base chain.",
     screenshotUrls: [`${ROOT_URL}/screenshot.png`],
     iconUrl: `${ROOT_URL}/icon.png`,
     splashImageUrl: `${ROOT_URL}/splash.png`,
@@ -30,10 +30,9 @@ export const minikitConfig = {
     primaryCategory: "games",
     tags: ["game", "tictactoe", "ai", "multiplayer", "base"],
     heroImageUrl: `${ROOT_URL}/hero.png`,
-    tagline: "Master the neon grid",
-    ogTitle: "BaseTacToe - Neon Tic-Tac-Toe Game",
-    ogDescription:
-      "Play classic Tic-Tac-Toe with stunning neon visuals on Base chain!",
+    tagline: "Master the board",
+    ogTitle: "BaseTacToe - Tic-Tac-Toe Game",
+    ogDescription: "Play classic Tic-Tac-Toe on Base chain!",
     ogImageUrl: `${ROOT_URL}/hero.png`,
   },
 } as const;
