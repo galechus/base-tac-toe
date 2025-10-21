@@ -1,0 +1,34 @@
+# Reguły projektu Base Tac Toe
+
+## Dokumentacja референсyjna
+
+Zawsze sprawdzaj następujące dokumentacje podczas pracy z tym projektem:
+
+### Base Mini Apps Documentation
+- Quickstart: https://docs.base.org/mini-apps/
+- Migrate Existing App: https://docs.base.org/mini-apps/quickstart
+- Create Mini App: https://docs.base.org/mini-apps/create
+- Build Checklist: https://docs.base.org/mini-apps/build-checklist
+- Manifest: https://docs.base.org/mini-apps/manifest
+- Context: https://docs.base.org/mini-apps/context
+- Embeds & Previews: https://docs.base.org/mini-apps/embeds
+- Base Account: https://docs.base.org/mini-apps/base-account
+- Authentication: https://docs.base.org/mini-apps/authentication
+- Navigation: https://docs.base.org/mini-apps/navigation
+- Notifications: https://docs.base.org/mini-apps/notifications
+
+## Kluczowe wymagania
+
+1. Używaj `@farcaster/miniapp-sdk` dla integracji Mini App
+2. Manifest musi być dostępny pod `/.well-known/farcaster.json`
+3. Wywołaj `sdk.actions.ready()` gdy aplikacja jest gotowa do wyświetlenia
+4. Dołącz metadata `fc:miniapp` dla embedów
+5. Zadbaj o accountAssociation credentials dla weryfikacji własności
+
+## Stack technologiczny
+
+- Next.js (React)
+- TypeScript
+- Base Chain
+- Farcaster Mini App SDK
+
